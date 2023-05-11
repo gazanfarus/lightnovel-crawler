@@ -5,8 +5,8 @@ from urllib.parse import quote_plus
 from lncrawl.core.crawler import Crawler
 
 logger = logging.getLogger(__name__)
-search_url = "https://booknet.com/en/search?q=%s"
-get_chapter_url = "https://booknet.com/reader/get-page"
+search_url = "https://litnet.com/en/search?q=%s"
+get_chapter_url = "https://litnet.com/reader/get-page"
 
 
 class LitnetCrawler(Crawler):
@@ -15,7 +15,7 @@ class LitnetCrawler(Crawler):
     ]
 
     def initialize(self):
-        self.home_url = "https://booknet.com/"
+        self.home_url = "https://litnet.com/"
         self.init_executor(1)
 
     def search_novel(self, query):
